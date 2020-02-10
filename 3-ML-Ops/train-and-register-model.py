@@ -62,10 +62,10 @@ def main():
     )
     run_config.environment.docker.enabled = True
 
-    datastore_name = 'tfworld'
-    container_name = 'azureml-blobstore-7c6bdd88-21fa-453a-9c80-16998f02935f'
-    account_name = 'tfworld6818510241'
-    sas_token = '?sv=2019-02-02&ss=bfqt&srt=sco&sp=rl&se=2019-11-08T05:12:15Z&st=2019-10-23T20:12:15Z&spr=https&sig=eDqnc51TkqiIklpQfloT5vcU70pgzDuKb5PAGTvCdx4%3D'  # noqa: E501
+    datastore_name = 'workspaceblobstore'
+    container_name = 'azureml-blobstore-ada7afe2-cdb6-4eb6-8805-f7a3cf161fb3'
+    account_name = 'bert3308922571'
+    account_key = 'T2mfL1at6AMaL0Qstx/JjuWKrz8c/r8PayBdSRFPan3aIAeMJpuAx3biqojbKexx7aKBOAtSnpEtu8H+lj4FRw=='  # noqa: E501
 
     try:
         existing_datastore = Datastore.get(aml_workspace, datastore_name)
@@ -75,11 +75,11 @@ def main():
                                            datastore_name=datastore_name,
                                            container_name=container_name,
                                            account_name=account_name,
-                                           sas_token=sas_token
+                                           account_key=account_key
                                            )
 
     azure_dataset = Dataset.File.from_files(
-        path=(existing_datastore, 'azure-service-classifier/data'))
+        path=(existing_datastore, 'data_shared_inbox/data'))
     azure_dataset = azure_dataset.register(
         workspace=aml_workspace,
         name='Azure Services Dataset',
