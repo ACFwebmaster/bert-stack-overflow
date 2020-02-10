@@ -21,9 +21,9 @@ flags.DEFINE_float('learning_rate', 3e-5, 'Learning rate for training.')
 flags.DEFINE_integer('steps_per_epoch', 150, 'Number of steps per epoch.')
 flags.DEFINE_integer(
     'num_epochs', 3, 'Number of epochs to train for.', lower_bound=0)
-flags.DEFINE_string('data_dir', '/mnt/c/Users/phill/azure-ml/bert-stack-overflow/1-Training/data-shared-inbox/',
+flags.DEFINE_string('data_dir', None,
                     'Root path of directory where data is stored.')
-flags.DEFINE_string('export_dir', '/mnt/c/Users/phill/azure-ml/bert-stack-overflow/1-Training/outputs',
+flags.DEFINE_string('export_dir', './outputs',
                     'The directory to export the model to')
 
 

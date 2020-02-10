@@ -39,10 +39,11 @@ class TFBertForMultiClassification(TFBertPreTrainedModel):
 
 
 max_seq_length = 128
-labels = [
-    'azure-web-app-service', 'azure-storage',
-    'azure-devops', 'azure-virtual-machine', 'azure-functions'
-]
+# labels = [
+#     'azure-web-app-service', 'azure-storage',
+#     'azure-devops', 'azure-virtual-machine', 'azure-functions'
+# ]
+labels = ['reply-required', 'no-reply-required']
 
 
 def init():
