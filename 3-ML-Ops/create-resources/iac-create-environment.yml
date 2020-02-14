@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: devopsforai-aml-vg
+- group: devopsforai-aml-vg-2
 
 
 steps:
@@ -25,5 +25,3 @@ steps:
     overrideParameters: '-baseName $(BASE_NAME) -location $(LOCATION)'
     deploymentMode: 'Incremental'
   displayName: 'Deploy MLOps resources to Azure'
-
-  
