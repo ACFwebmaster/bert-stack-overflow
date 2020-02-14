@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: devopsforai-aml-vg-2
+- group: devopsforai-aml-vg-stackoverflow
 
 
 steps:
